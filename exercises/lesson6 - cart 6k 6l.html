@@ -2,17 +2,18 @@
 <html>
   <head>
     <title> calculator </title>
-
-    <script>
-      let calculation = 0;
-      
-
-    </script>
   </head>
   <body>
     <button onclick=
     "
-    calculation += 1;
+    if ((calculation + 1) >= 10) {
+      alert('cart is full')
+      calculation = 10;
+    } else { 
+      calculation += 1;
+    console.log(calculation);
+    }
+
     "
     >1
     </button>
@@ -35,8 +36,23 @@
     <button>+</button>
     <button>=</button>
     <button onclick=" calculation -- ;console.log(calculation);">remove from cart</button>
-    <button onclick=" calculation -= 2; console.log(calculation);">-2</button>
-    <button onclick=" calculation -= 3; console.log(calculation);">-3</button>
+    <button onclick=" 
+      if ((calculation - 2) <= 0) {
+          alert('Not enough items in the cart')
+          } else { 
+          calculation -= 2;
+          };
+        console.log(calculation);
+    
+    ">-2</button>
+    <button onclick="
+      if ((calculation - 3) <= 0) {
+        alert('Not enough items in the cart')
+        } else { 
+        calculation -= 3;
+        };
+      console.log(calculation);
+    ">-3</button>
 
   </body>
   <script>
@@ -44,6 +60,8 @@
     const num1 = 1;
     const num2 = 2;
     const num3 = 3;
+    let calculation =0;
+    
     let order1 = 5;
     let order2 = 3;
     let order3 = 9;
