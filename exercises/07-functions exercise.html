@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+      
+    </head>
+    <body>
+
+    </body>
+    <script>
+      let result = '';
+
+      function greet(name){
+        if (name === undefined){
+          console.log('Hello undefined!');
+        } else {
+          console.log(`Hello11 ${name}`);
+        }
+        
+      };
+      greet('Szymon');
+      function convertToFahrenheit(celcius){
+        return (celcius *9/5) +32;
+      };
+      console.log(convertToFahrenheit(25));
+
+      function convertToCelcius(fahrenheit){
+        return ((fahrenheit - 32)*5/9);
+      };
+      console.log(convertToCelcius(86));
+
+
+      function convertTemperature(degrees, unit){
+        if (unit === 'C'){
+          return String((degrees *9/5) +32)
+        } else if (unit === 'F'){
+          result = String(((degrees - 32)*5/9))
+          return result;
+        }
+      };
+      console.log(`? ${convertTemperature(86, 'F')}`);
+      
+      function convertLength(length, from, to){
+        if (from === to){
+          return length;
+        } else if (from === 'miles'){
+          return length * 1.60934;
+        } else if (from === 'km') {
+          return length * 0.621371;
+        } else if (from === 'feet' && to === 'km'){
+          return length * 0.0003048;
+        } else if (from === 'feet' && to === 'miles'){
+          return lenght * 0.000189394;
+        }
+
+        function km(to) {
+          if (to === 'miles'){
+            return to * 1.60934 // miles
+        };
+
+        };
+        };
+
+        function miles(to){
+
+        };
+
+        function feet(to){
+
+
+        };
+
+      
+        
+        
+      console.log(convertLength(50, 'miles', 'km'))
+      console.log(convertLength(32, 'km', 'miles'))
+      console.log(convertLength(50, 'km', 'km'))
+    </script>
+  </html>
