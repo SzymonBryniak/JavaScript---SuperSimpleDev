@@ -67,22 +67,22 @@
         if (from === to){
           return length; // km to km
         } else if (from === 'miles' && to === 'km'){
-          return length * 1.60934;// miles to km
+          return console.log(length * 1.60934);// miles to km
         } else if (from === 'km' && to === 'miles') {
-          return length * 0.621371; // km to miles
+          return console.log(length * 0.621371); // km to miles
         } else if (from === 'miles' && to === 'feet'){
-          return length * 5280; // miles to feet
+          return console.log(length * 5280); // miles to feet
         } else if (from === 'km' && to === 'feet'){
-          return length * 3280.84; // km to feet
+          return console.log(length * 3280.84); // km to feet
         } else {
           return checkInvalid(from, to);
         // };
         };
       };
       
-      console.log(convertLength(50, 'miles', 'km'))
-      console.log(convertLength(32, 'km', 'mile'))
-      console.log(convertLength(50, 'km', 'feet'))
+      convertLength(50, 'miles', 'km')
+      convertLength(32, 'km', 'mile')
+      convertLength(50, 'km', 'feet')
     </script>
   </html>
   
