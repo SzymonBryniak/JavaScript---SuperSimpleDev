@@ -32,12 +32,46 @@
       product['delivery-time'] = "3 days";
       console.log(product);
 
-      function comparePrice(product1, product2){
-       return  product1 > product2? product1 : product2; 
+
+      const product1 = {
+        name: "earplug",
+        price: 2999
 
       };
 
-      console.log(comparePrice(10, 12))
+      const product2 = {
+        name: "foam",
+        price: 300
+      };
+
+      function comparePrice(product1, product2){ // 8d
+       return  product1.price > product2.price? product1 : product2;
+
+      };
+
+      console.log(comparePrice(product1, product2));
+
+      function isSameProduct(product1, product2){ //8e
+        return console.log(product1 === product2);
+      };
+
+      isSameProduct(product1, product1);
+
+      let text = 'StRing';
+      let lowercase = text.toLowerCase();
+
+      console.log(lowercase);
+
+      let text1 = "Hello!";
+      let repeatCount = 3;
+      let repeatedText = "";
+
+      for (let i = 0; i < repeatCount; i++) { //8g
+        repeatedText += text1;
+      };
+
+console.log(repeatedText); // Output: "Hello!Hello!Hello!"
+
     </script>
   </body>
 </html>
