@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> calculator </title>
+    <script>
+      localStorage.getItem('calculation')? console.log(localStorage.getItem('calculation')) : ''  // 8h
+    </script>
+  </head>
+  <body>
+    <p>
+      <button onclick="
+      updateCalculation(1);
+      ">1</button>
+    </p>
+    
+    <p>
+      <button onclick="
+      updateCalculation(2);
+      ">2</button>
+    </p>
+    
+    <p>
+      <button onclick="
+      updateCalculation(3);
+      ">3</button>
+    </p>
+    <p>
+      <button onclick="
+      updateCalculation(4);
+      ">4</button>
+    </p>
+    <p>
+      <button onclick=
+      "
+      updateCalculation(5);
+      ">5</button>
+    </p>
+    <p>
+      <button onclick="
+      updateCalculation('+');
+      ">+</button>
+    </p>
+    
+    <p>
+      <button onclick="
+      console.log(eval(calculation))
+      ">=</button>
+    </p>
+    <p>
+      <button onclick="
+      calculation -- ;console.log(calculation);">remove from cart</button>
+    </p>
+    <p>
+      <button onclick=" calculation -= 2; console.log(calculation);">-2</button>
+    </p>
+    <p>
+      <button onclick=" calculation -= 3; console.log(calculation);">-3</button>
+    </p>
+
+
+  </body>
+  <script>
+    const name = 'Szymon'
+    const num1 = 1;
+    const num2 = 2;
+    const num3 = 3;
+    let calculation = 0;
+    let order1 = 5;
+    let order2 = 3;
+    let order3 = 9;
+    let cost = order1 + order2 + order3
+    console.log(`My name is: ${name}`)
+    console.log(`cost of food is ${cost}`)
+    let tax = cost * 0.1;
+    console.log(`Tax is 10% ${tax}`);
+    let totalCost = tax + cost;
+    console.log(`total cost is $${totalCost}`)
+
+    function updateCalculation(value){
+      calculation += value;
+      localStorage.setItem('calculation', calculation); // 8h
+      console.log(calculation)
+    };
+  </script>
+</html>
