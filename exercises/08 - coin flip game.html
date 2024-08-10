@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      score = JSON.parse(localStorage.getItem('score'));
+      console.log(score);
+    </script>
+    <title>Rock Paper Scissors</title>
+      
+  </head>
+    <body>
+
+      <p>Rock Paper Scissors</p>
+      <button onclick="playGame('heads')">heads</button>
+      <button onclick="playGame('tails')">tails</button>
+      <script>
+        
+        let guess = ''
+        const now = String(new Date()) ;
+        let manualNow =  15 ;
+        const name = 'Szymon';
+        const age = 6 ;
+        const isHoliday = false;
+        const score = {
+          wins: 0,
+          losses: 0
+        };
+        // console.log(now) ;
+        // manualNow = prompt('Enter an hour ');
+        // if (manualNow >= 6 && manualNow <= 12) {
+        //     alert(`Good morning ${name}!`);
+        // } else if (manualNow >= 13 && manualNow <=17) {
+        //   console.log(`Good afternoon ${name}!`);
+        // } else {
+        //   console.log(`Good night ${name}!`);
+        // };
+
+        // const discount = age <= 6 || age >= 65 ? alert('discount') : alert('no discount');
+        // const holidayDiscount = isHoliday && (age <= 6 || age >= 65) ? alert('discount') : alert('no discount');
+
+        const rNumber = Math.random();
+        let result = '';
+        if (rNumber < 0.5) {
+          // console.log('heads')
+          result = 'heads'
+        } else {
+          // console.log('tails')
+          result = 'tails'
+        }
+        function playGame(guess){
+          win = guess === 'heads'? alert('You win!') : alert ('You lose!');
+          guess === 'heads'? score.wins +=1: score.losses+=1;
+          localStorage.setItem('score', JSON.stringify(score));
+          console.log(score);
+        }
+        
+        
+
+      </script>
+    </body>
+</html>
+    
