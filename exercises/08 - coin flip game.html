@@ -2,8 +2,8 @@
 <html>
   <head>
     <script>
-      score = JSON.parse(localStorage.getItem('score'));
-      console.log(score);
+      // localStorage.getItem('score');
+      
     </script>
     <title>Rock Paper Scissors</title>
       
@@ -14,17 +14,18 @@
       <button onclick="playGame('heads')">heads</button>
       <button onclick="playGame('tails')">tails</button>
       <script>
-        
+      
+        const score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+      };
         let guess = ''
-        const now = String(new Date()) ;
+        const now = String(new Date());
         let manualNow =  15 ;
         const name = 'Szymon';
         const age = 6 ;
         const isHoliday = false;
-        const score = {
-          wins: 0,
-          losses: 0
-        };
+        
         // console.log(now) ;
         // manualNow = prompt('Enter an hour ');
         // if (manualNow >= 6 && manualNow <= 12) {
@@ -34,7 +35,6 @@
         // } else {
         //   console.log(`Good night ${name}!`);
         // };
-
         // const discount = age <= 6 || age >= 65 ? alert('discount') : alert('no discount');
         // const holidayDiscount = isHoliday && (age <= 6 || age >= 65) ? alert('discount') : alert('no discount');
 
@@ -48,11 +48,19 @@
           result = 'tails'
         }
         function playGame(guess){
-          win = guess === 'heads'? alert('You win!') : alert ('You lose!');
-          guess === 'heads'? score.wins +=1: score.losses+=1;
+          
+          if (guess === 'heads') {
+            score.wins ++ ;
+          } else if (guess === 'tails'){
+            score.losses ++ ;
+          };
+
+          win = guess === 'heads'? alert(`You win! the score is: ${score.wins}`) : alert (`You lose! the score is: ${score.wins}`);
+          // guess === 'heads'? score.wins +=1: score.losses+=1;
           localStorage.setItem('score', JSON.stringify(score));
-          console.log(score);
-        }
+          console.log(score)
+          
+        };
         
         
 
