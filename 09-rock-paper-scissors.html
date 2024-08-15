@@ -21,7 +21,9 @@
       "
       >Scissors</button>
       <p class="js-result"></p>
+
       <p class="js-moves"></p>
+
       <p class="js-score"></p>
 
       <button onclick="
@@ -45,8 +47,7 @@
             ties: 0
         }
         updateScoreElement();
-        updateMovesElement();
-        updateResulteElement();
+       
         /*
         if (!score) {
           score = {
@@ -78,14 +79,17 @@
           document.querySelector('.js-score')
           .innerHTML = `wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
         };
-        function updateMovesElement() {
-          document.querySelector('.js-moves')
-          .innerHTML = `You picked ${playerMove}. Computer picked ${computerMove}`
-        };
-        function updateResulteElement() {
-          document.querySelector('.js-result')
-          .innerHTML = `Result: ${result}`
-        };
+        // function updateMovesElement(playerMove, computerMove) {
+        //   document.querySelector('.js-moves')
+        //   .innerHTML = `You picked ${playerMove || 'not yet choosen'}, Computer picked ${computerMove}`
+        // };
+        // function updateResulteElement(result) {
+        //   document.querySelector('.js-result')
+        //   .innerHTML = `Result: ${result}`
+        // };
+
+        
+
         function playGame(playerMove) {
           let result = "";
           const computerMove = pickComputerMove();
@@ -127,12 +131,16 @@
             localStorage.setItem('score', JSON.stringify(score));
 
             updateScoreElement();
-            updateMovesElement();
-            updateResultElement();
+            // updateMovesElement(playerMove, computerMove);
+            // updateResultElement(result);
+            document.querySelector('.js-moves')
+              .innerHTML = `You picked ${playerMove || 'not yet choosen'}, Computer picked ${computerMove}`
+            document.querySelector('.js-result')
+              .innerHTML = `Result: ${result}`
+          };
 
-          alert(`You picked ${playerMove}. Computer picked ${computerMove} ${result} 
-wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
-        }
+         
+        
         // console.log(true && false);
         // console.log(0.2 >= 0 && 0.2 < 1 / 3);
         // console.log(true || false)
