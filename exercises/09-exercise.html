@@ -6,17 +6,61 @@
   </head>
     <body>
       <button class="button"></button>
-      <button class="9b-button" onclick="
-      changeText();">9b</button>
+      <button class="button-B9" onclick="
+      changeText(event);
+      
+      ">9b</button>
+
+      <button onclick="displayChoice('heads')">heads</button>
+      <button onclick="displayChoice('tails')">tails</button>
+      <p class="display"></p>
+
+      <input placeholder="enter name" class="inputClass" onkeydown="onKeyDown(event);">
+      <button onclick="
+        displayOnPage();
+      ">Submit</button>
+
+      <div>
+        <input class="liveInput" onkeyup="liveDisplay();">
+
+      </div>
+      <div class="div">
+
+      </div>
+
       <script>
   
-       document.querySelector('button')
+       document.querySelector('.button')
         .innerHTML = '9a';
 
         function changeText(){
-          document.querySelector('9b-button"').innerText = '9b done!';
+          document.querySelector('.button-B9').innerHTML = '9b done!';
 
+        };
+
+        function displayChoice(choice){
+          document.querySelector('.display')
+            .innerHTML = `${choice}`;
+        };
+        function displayOnPage(){
+          const inputValue = document.querySelector('.inputClass');
+            const value = inputValue.value
+            document.writeln(`Your name is ${value}`);
+        };
+
+        function onKeyDown(event){
+          if (event.key === 'Enter'){
+            displayOnPage();
+          }
+        };
+
+        function liveDisplay(){
+          const inputForLive = document.querySelector('.liveInput');
+            let valueInput = inputForLive.value;
+          document.querySelector('.div').innerHTML = `${valueInput}`
+            
         };
       </script>
   </body>
 </html>
+
