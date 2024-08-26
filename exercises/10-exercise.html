@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<HTML>
+  <head>
+    <title>10-Exercise</title>
+
+    <style>
+      .cart-button {
+        font-family: Calibri;
+        border: none;
+        background-color: rgb(255, 216, 20);
+        border-radius: 60px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+       .uber-request-button {
+        background-color: rgb(230, 230, 230);
+       }
+       .uber-request-button {
+        border-radius: 4px;
+        font-family: Calibri;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+       }
+       .uber-schedule-button {
+        border-radius: 4px;
+        font-family: Calibri;
+        background-color: rgb(230, 230, 230);
+        color: black;
+        font-weight: bold;
+        border: none;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+       }
+       .js-Gaming {
+        background-color: gray;
+       }
+       .js-Gaming2 {
+        background-color: black;
+        color: grey;
+       }
+    </style>
+  </head>
+  <body>
+    <p>10a. Amazon button</p>
+    <button class="cart-button">Add to Cart</button>
+    <p>10b. Uber buttons</p>
+    <button class="uber-request-button">Request now</button>
+    <button class="uber-schedule-button">Schedule for later</button>
+    <p>10c</p>
+    <button class="js-button">Test</button>
+
+
+    <button onclick="turnON();" class="js-Gaming">Gaming</button>
+  </body>
+    <script>
+      /* 10c to check solution */
+      let query = document.querySelector('.js-button');
+      let checkclass = query.classList.contains('js-button');
+      console.log(checkclass);
+
+      function turnON () {
+        const ButtonSwitch = document.querySelector('.js-Gaming');
+        ButtonSwitch.classList.contains('js-Gaming2') ? ButtonSwitch.classList.remove('js-Gaming2') : ButtonSwitch.classList.add('js-Gaming2');
+        
+
+      }  //10d
+      function toggleClass() {
+        let gamingButton = document.querySelector('uber-schedule-button');
+        // console.log(gamingButton.classList.contains('is-toggled'));
+      }
+      // gamingButton.classList.toggle('is-toggled');
+
+    </script>
+
+</HTML>
