@@ -60,7 +60,7 @@
     <p>10c</p>
     <button class="js-button">Test</button>
     <p>10d</p>
-    <button onclick="turnON();" class="js-Gaming">Gaming</button>
+    <button onclick="turnON('js-Gaming');" class="js-Gaming">Gaming</button>
     <p>10e</p>
     <button onclick="turnON('Gaming1');" class="Gaming1 ">Gaming1</button>
     <button onclick="turnON('Music');" class="Music">Music</button>
@@ -74,8 +74,9 @@
 
       function turnON (classVal) {
         const ButtonSwitch = document.querySelector(`.${classVal}`);
-        ButtonSwitch.classList.contains('js-Gaming2') ? ButtonSwitch.classList.remove('js-Gaming2') : ButtonSwitch.classList.add('js-Gaming2');
         
+        ButtonSwitch.classList.contains('js-Gaming2') ? ButtonSwitch.classList.remove('js-Gaming2') : ButtonSwitch.classList.add('js-Gaming2');
+
 
       }  //10d
       function toggleClass() {
