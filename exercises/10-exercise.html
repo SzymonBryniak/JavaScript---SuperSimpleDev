@@ -59,9 +59,12 @@
     <button class="uber-schedule-button">Schedule for later</button>
     <p>10c</p>
     <button class="js-button">Test</button>
-
-
+    <p>10d</p>
     <button onclick="turnON();" class="js-Gaming">Gaming</button>
+    <p>10e</p>
+    <button onclick="turnON('Gaming1');" class="Gaming1 ">Gaming1</button>
+    <button onclick="turnON('Music');" class="Music">Music</button>
+    <button onclick="turnON('Tech');" class="Tech">Tech</button>
   </body>
     <script>
       /* 10c to check solution */
@@ -69,8 +72,8 @@
       let checkclass = query.classList.contains('js-button');
       console.log(checkclass);
 
-      function turnON () {
-        const ButtonSwitch = document.querySelector('.js-Gaming');
+      function turnON (classVal) {
+        const ButtonSwitch = document.querySelector(`.${classVal}`);
         ButtonSwitch.classList.contains('js-Gaming2') ? ButtonSwitch.classList.remove('js-Gaming2') : ButtonSwitch.classList.add('js-Gaming2');
         
 
