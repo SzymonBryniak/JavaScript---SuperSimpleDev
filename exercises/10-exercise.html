@@ -5,6 +5,7 @@
     <title>10-Exercise</title>
 
     <style>
+    
       .cart-button {
         font-family: Calibri;
         border: none;
@@ -73,12 +74,17 @@
       console.log(checkclass);
 
       function turnON (classVal) {
-        const ButtonSwitch = document.querySelector(`.${classVal}`);
-        
+        const ButtonSwitch = document.querySelector(`.${classVal}`);  
+        const allButtons = document.querySelectorAll('button');
+        // const classCount = allButtons.classList.contains('js-Gaming2');
+        console.log(allButtons);
+
+
         ButtonSwitch.classList.contains('js-Gaming2') ? ButtonSwitch.classList.remove('js-Gaming2') : ButtonSwitch.classList.add('js-Gaming2');
+      
 
-
-      }  //10d
+      }  
+      //10d
       function toggleClass() {
         let gamingButton = document.querySelector('uber-schedule-button');
         // console.log(gamingButton.classList.contains('is-toggled'));
