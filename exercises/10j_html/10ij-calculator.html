@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> calculator </title>
+    <script>
+      localStorage.getItem('calculation')? console.log(localStorage.getItem('calculation')) : ''  // 8h
+    </script>
+    <link rel="stylesheet" href="../10j_css/10j.css">
+  </head>
+  <body>
+    <p class="js-calculation"></p>
+    <p>
+      <button onclick="
+      updateCalculation(1);
+      ">1</button>
+
+      <button onclick="
+      updateCalculation(2);
+      ">2</button>
+  
+      <button onclick="
+      updateCalculation(3);
+      ">3</button>
+
+      <button onclick="
+      updateCalculation('+');
+      ">+</button>
+    </p>
+    <p>
+      <button onclick="
+      updateCalculation(4);
+      ">4</button>
+    
+      <button onclick=
+      "
+      updateCalculation(5);
+      ">5</button>
+      <button onclick=
+      "
+      updateCalculation(5);
+      ">6</button>
+
+      <button onclick="
+      updateCalculation('+');
+      ">-</button>
+    </p>
+    <p>
+      <button onclick="
+      updateCalculation(4);
+      ">7</button>
+    
+      <button onclick=
+      "
+      updateCalculation(5);
+      ">8</button>
+      <button onclick=
+      "
+      updateCalculation(5);
+      ">9</button>
+
+      <button onclick="
+      updateCalculation('+');
+      ">*</button>
+    </p>
+    
+    <p>
+      <button onclick="
+      updateCalculation(0);
+      ">0</button>
+
+      <button onclick="
+      updateCalculation(0);
+      ">.</button>
+
+      <button onclick="
+      equals();
+      
+      ">=</button>
+
+      <button onclick="
+      updateCalculation(0);
+      ">/</button>
+    </p>
+    <p>
+      <button onclick="
+      updateCalculation(0);
+      ">Clear</button>
+    </p>
+    <p>
+      <button onclick="
+      calculation -- ;console.log(calculation);">remove from cart</button>
+    </p>
+    <p>
+      <button onclick=" updateCalculation(-2); console.log(calculation);">-2</button>
+    </p>
+    <p>
+      <button onclick=" updateCalculation(-3); console.log(calculation);">-3</button>
+    </p>
+    <p class="calculation_display"></p>
+
+  </body>
+
+  <script src="../10j_js/10j.js"></script>
+</html>
