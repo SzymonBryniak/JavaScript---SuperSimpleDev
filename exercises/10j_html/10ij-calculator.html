@@ -9,6 +9,7 @@
   </head>
   <body>
     <p class="js-calculation"></p>
+    <p class="calculation_display" style="font-size: 30px;"></p>
     <p>
       <button onclick="
       updateCalculation(1);
@@ -24,7 +25,7 @@
 
       <button onclick="
       updateCalculation('+');
-      ">+</button>
+      " class="js-orange">+</button>
     </p>
     <p>
       <button onclick="
@@ -37,30 +38,30 @@
       ">5</button>
       <button onclick=
       "
-      updateCalculation(5);
+      updateCalculation(6);
       ">6</button>
 
       <button onclick="
-      updateCalculation('+');
-      ">-</button>
+      updateCalculation('-');
+      " class="js-orange">-</button>
     </p>
     <p>
       <button onclick="
-      updateCalculation(4);
+      updateCalculation(7);
       ">7</button>
     
       <button onclick=
       "
-      updateCalculation(5);
+      updateCalculation(8);
       ">8</button>
       <button onclick=
       "
-      updateCalculation(5);
+      updateCalculation(9);
       ">9</button>
 
       <button onclick="
-      updateCalculation('+');
-      ">*</button>
+      updateCalculation('*');
+      " class="js-orange">*</button>
     </p>
     
     <p>
@@ -69,7 +70,7 @@
       ">0</button>
 
       <button onclick="
-      updateCalculation(0);
+      updateCalculation('.');
       ">.</button>
 
       <button onclick="
@@ -78,25 +79,14 @@
       ">=</button>
 
       <button onclick="
-      updateCalculation(0);
-      ">/</button>
+      updateCalculation('/');
+      " class="js-orange">/</button>
     </p>
     <p>
       <button onclick="
-      updateCalculation(0);
-      ">Clear</button>
+      updateCalculation('Clear');
+      " style="font-size: 18px">Clear</button>
     </p>
-    <p>
-      <button onclick="
-      calculation -- ;console.log(calculation);">remove from cart</button>
-    </p>
-    <p>
-      <button onclick=" updateCalculation(-2); console.log(calculation);">-2</button>
-    </p>
-    <p>
-      <button onclick=" updateCalculation(-3); console.log(calculation);">-3</button>
-    </p>
-    <p class="calculation_display"></p>
 
   </body>
 

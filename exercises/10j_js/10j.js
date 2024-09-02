@@ -2,7 +2,7 @@ const name = 'Szymon'
 const num1 = 1;
 const num2 = 2;
 const num3 = 3;
-let calculation = 0;
+let calculation = '';
 let order1 = 5;
 let order2 = 3;
 let order3 = 9;
@@ -17,15 +17,32 @@ function equals(){
   document.querySelector('.calculation_display')
     .innerHTML = `${eval(calculation)}`;
 }
-function updateCalculation(value){
+// function updateCalculation(value){
 
-  calculation += value;
+//   calculation += value;
+//   localStorage.setItem('calculation', calculation); // 8h
+//   console.log(calculation)
+  
+//   document.querySelector('.calculation_display')
+//     .innerHTML = `${calculation}`;
+  
+
+  
+// };
+
+function updateCalculation(value){
+  if (value == 'Clear') {
+    calculation = '';
+    localStorage.setItem('calculation', calculation)
+    document.querySelector('.calculation_display')
+    .innerHTML = `${calculation}`;
+  } else{
+  calculation += String(value);
   localStorage.setItem('calculation', calculation); // 8h
   console.log(calculation)
-  
   document.querySelector('.calculation_display')
     .innerHTML = `${calculation}`;
   
-
+  }
   
 };
