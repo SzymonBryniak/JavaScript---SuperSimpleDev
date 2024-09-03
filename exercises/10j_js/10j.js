@@ -15,6 +15,7 @@ console.log(`Tax is 10% ${tax}`);
 let totalCost = tax + cost;
 console.log(`total cost is $${totalCost}`)
 function equals(){
+  calculation = eval(calculation);
   document.querySelector('.calculation_display')
     .innerHTML = `${calculation}`;
     secondSum = eval(calculation)
@@ -34,7 +35,7 @@ function equals(){
   
 // };
 
-function updateCalculation(value){
+function updateCalculation(value){  // 
   
   if (value == 'Clear') {
     calculation = '';
