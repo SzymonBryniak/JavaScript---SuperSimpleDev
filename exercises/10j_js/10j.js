@@ -3,6 +3,7 @@ const num1 = 1;
 const num2 = 2;
 const num3 = 3;
 let calculation = '';
+let secondSum = '';
 let order1 = 5;
 let order2 = 3;
 let order3 = 9;
@@ -15,7 +16,10 @@ let totalCost = tax + cost;
 console.log(`total cost is $${totalCost}`)
 function equals(){
   document.querySelector('.calculation_display')
-    .innerHTML = `${eval(calculation)}`;
+    .innerHTML = `${calculation}`;
+    secondSum = eval(calculation)
+  document.querySelector('.js-calculation-sum')
+  .innerHTML = secondSum;
 }
 // function updateCalculation(value){
 
@@ -31,10 +35,14 @@ function equals(){
 // };
 
 function updateCalculation(value){
+  
   if (value == 'Clear') {
     calculation = '';
+    secondSum = '';
     localStorage.setItem('calculation', calculation)
     document.querySelector('.calculation_display')
+    .innerHTML = `${calculation}`;
+    document.querySelector('.js-calculation-sum')
     .innerHTML = `${calculation}`;
   } else{
   calculation += String(value);
