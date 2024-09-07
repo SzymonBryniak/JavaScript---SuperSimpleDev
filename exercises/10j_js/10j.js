@@ -14,6 +14,7 @@ let tax = cost * 0.1;
 console.log(`Tax is 10% ${tax}`);
 let totalCost = tax + cost;
 console.log(`total cost is $${totalCost}`)
+
 function equals(){
   calculation = eval(calculation);
   document.querySelector('.calculation_display')
@@ -30,13 +31,14 @@ function equals(){
   
 //   document.querySelector('.calculation_display')
 //     .innerHTML = `${calculation}`;
-  
 
-  
 // };
 
-function updateCalculation(value){  // 
-  
+
+function updateCalculation(value){  // needs to clear the bottom sum when a new digit is entered
+ 
+  let strSlice = toString(value).at(-1);
+  console.log(` slice with len example ${strSlice}`)
   if (value == 'Clear') {
     calculation = '';
     secondSum = '';
@@ -45,13 +47,15 @@ function updateCalculation(value){  //
     .innerHTML = `${calculation}`;
     document.querySelector('.js-calculation-sum')
     .innerHTML = `${calculation}`;
-  } else{
+  // } else if (strSlice !== Number && value === strSlice){
+  //     return
+  }else {
   calculation += String(value);
   localStorage.setItem('calculation', calculation); // 8h
   console.log(calculation)
   document.querySelector('.calculation_display')
     .innerHTML = `${calculation}`;
-  
-  }
+    }
+
   
 };
