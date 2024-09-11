@@ -1,4 +1,4 @@
-const nums = [10, 20, 30];  //11a
+let nums = [10, 20, 30];  //11a
 nums[2] = 99
 
 document.querySelector('.test').innerHTML = nums;
@@ -78,3 +78,48 @@ function addArrays(array1, array2) {
 }
 
 addArrays(iterArray, iterArray);
+
+nums = [-1, -10, 2, 6, 22];
+
+function countPositive(nums) {  //11k
+  console.log(nums.length);
+  let positiveCount = 0;
+  for (let i = 0; i < nums.length; i++) {
+    console.log(nums[i]);
+    if (nums[i] > 0){
+      positiveCount += 1;
+    }
+    
+  }
+  console.log(` positive count: ${positiveCount}`);
+}
+
+countPositive(nums);  //11l, 11m
+nums = [5999, 200, 1 -10, -12, 20, 87];
+// nums = [];
+function minMax(nums) {
+  let min;
+  let max;
+  for (let i = 0; i < nums.length; i++){
+
+      if (nums === undefined){
+          min = null;
+          max = null;
+          return console.log(console.log(`min: null, max: null`));
+      } else if (i === 0) {
+          min = nums[i];
+          max = nums[i];
+      } else if (i > 0) {
+          if (nums[i] > max) {
+            max = nums[i];
+          }
+          if (nums[i] < min) {
+            min = nums[i];
+          }
+  }
+  }
+  console.log(`min: ${min}, max: ${max}`);
+}
+
+
+minMax(nums);
