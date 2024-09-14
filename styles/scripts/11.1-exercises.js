@@ -95,18 +95,24 @@ function countPositive(nums) {  //11k
 }
 
 countPositive(nums);  //11l, 11m
-nums = [5999, 200, 1 -10, -12, 20, 87];
+// nums = [5999, 200, 1 -10, -12, 20, 87];
 // nums = [];
+nums = [3];
+console.log(nums.length);
+
 function minMax(nums) {
+  let val = nums.length
   let min;
   let max;
+
+  if (val === 0){
+    min = null;
+    max = null;
+    return console.log(console.log(`min: null, max: null`));
+} else {
   for (let i = 0; i < nums.length; i++){
 
-      if (nums === undefined){
-          min = null;
-          max = null;
-          return console.log(console.log(`min: null, max: null`));
-      } else if (i === 0) {
+      if (i === 0) {
           min = nums[i];
           max = nums[i];
       } else if (i > 0) {
@@ -116,10 +122,36 @@ function minMax(nums) {
           if (nums[i] < min) {
             min = nums[i];
           }
+          
+    }
   }
-  }
+
+}
   console.log(`min: ${min}, max: ${max}`);
 }
 
 
 minMax(nums);
+
+
+//11n
+let words = ['apple', 'grape', 'apple', 'apple'];
+console.log(words);
+
+console.log(words.includes('apple'));
+
+function countWords(words){
+  let wordCount = {};
+  wordCount[words[0]] = 1;
+  console.log(words[i] in wordCount);
+  for (let i = 1; i < words.length; i++){
+    if (words[i] in wordCount === true) {
+      wordCount[words[i]] += 1;
+    } else {
+      wordCount[words[i]] = 1;
+    }
+  }
+  console.log(wordCount);
+}
+
+countWords(words);
